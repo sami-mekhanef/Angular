@@ -8,6 +8,7 @@ export const TICKETS_MOCKED: Ticket[] = [
     description: '',
     date: dateToday,
     student: 'Paul',
+    archived: true,
 
   },
   {
@@ -15,5 +16,6 @@ export const TICKETS_MOCKED: Ticket[] = [
     description: 'Description du voyage',
     date: dateToday,
     student: 'Anakin',
+    archived: false,
   },
 ];
