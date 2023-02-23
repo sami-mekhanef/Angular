@@ -10,9 +10,13 @@
     <input class="input-custom" type="text" id="description" [formControlName]="'description'">
   </label>
   <br>
-  <label for="description">
+  <label for="major">
     Major <br>
-    <input class="input-custom" type="text" id="major" [formControlName]="'major'">
+    <select nam="major-field" id="major" [formControlName]="'major'">
+      <option *ngFor="let currentMajor of major" [value]="currentMajor">
+        {{currentMajor}}
+      </option>
+    </select>
   </label>
   <br>
   <button type="submit" class="btn-custom" (click)="addTicket()">Create</button>
