@@ -23,7 +23,11 @@ export class TicketListComponent implements OnInit {
   }
 
   deleteTicket(ticket: Ticket) {
-    this.deleteTicket(ticket)
+    //this.deleteTicket(ticket);
+    let index = this.ticketList.indexOf(ticket);
+    if(index !== -1){
+      this.ticketList.splice(index,1);
+    }
   }
   
 

@@ -33,7 +33,7 @@ export class TicketService {
   deleteTicket(ticket: Ticket) {
     // You need here to update the list of ticket and then update our observable (Subject) with the new list
     // More info: https://angular.io/tutorial/toh-pt6#the-searchterms-rxjs-subject
-    const index = this.ticketList.indexOf(ticket);
+    let index = this.ticketList.indexOf(ticket);
     if(index !== -1){
       this.ticketList.splice(index,1);
       this.tickets$.next(this.ticketList);
